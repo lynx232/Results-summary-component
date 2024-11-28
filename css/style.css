@@ -1,0 +1,392 @@
+/* || ASSETS || */
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+
+/* || MODERN RESET
+        Credits go to:
+            Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/ || */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+/* || STYLESHEET || */
+:root {
+/* Background colors */
+    --BODY_BG-COLOR: hsl(221, 100%, 96%);
+    --HEADER_BG-COLOR_1: hsl(252, 100%, 67%);
+    --HEADER_BG-COLOR_2: hsl(241, 81%, 54%);
+    --RANKINGS_BG-COLOR_1: hsla(256, 72%, 46%, 1);
+    --RANKINGS_BG-COLOR_2: hsla(241, 72%, 46%, 0);
+    --MAIN_BG-COLOR: hsl(0, 0%, 100%);
+    --REACTION_BG-COLOR: rgba(255, 87, 87, 0.1);
+    --MEMORY_BG-COLOR: hsla(39, 100%, 56%, 0.1);
+    --VERBAL_BG-COLOR: hsla(166, 100%, 37%, 0.1);
+    --VISUAL_BG-COLOR: hsla(234, 85%, 45%, 0.1);
+    --BUTTON_BG_COLOR: hsl(224, 30%, 27%);
+
+/* Font colors */
+    --HEADER_F-COLOR_1: hsl(241, 100%, 89%);
+    --HEADER_F-COLOR_2: hsl(0, 0%, 100%);
+    --MAIN_F-COLOR_1: hsl(224, 30%, 27%);
+    --MAIN_F-COLOR_2: hsla(223, 30%, 27%, 0.5);
+    --REACTION_F-COLOR: hsl(0, 100%, 67%);
+    --MEMORY_F-COLOR: hsl(39, 100%, 56%);
+    --VERBAL_F-COLOR: hsl(166, 100%, 37%);
+    --VISUAL_F-COLOR: hsl(234, 85%, 45%);
+    --BUTTON_F_COLOR: hsl(0, 0%, 100%);
+}
+
+
+/* || || MOBILE || || */
+
+
+/* || BODY || */
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 375px;
+    font-family: 'Hanken Grotesk';
+    background-color: var(--BODY_BG-COLOR);
+}
+
+.resize__var {
+    border-radius: 20px;
+    background-color: var(--MAIN_BG-COLOR);
+    height: auto;
+}
+
+/* || HEADER || */
+header {
+    background: linear-gradient(var(--HEADER_BG-COLOR_1), var(--HEADER_BG-COLOR_2));
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+}
+
+h1 {
+    color: var(--HEADER_F-COLOR_1);
+    font-size: 1.125em;
+    font-weight: bold;
+    padding: 1em;
+}
+
+/* Rankings */
+.rankings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(var(--RANKINGS_BG-COLOR_1), var(--RANKINGS_BG-COLOR_2));
+    border-radius: 50%;
+    width: 8.75em;
+    height: 8.75em;
+    margin: 0 auto;
+}
+
+.position {
+    color: var(--HEADER_F-COLOR_2);
+    font-size: 3.5em;
+    font-weight: bolder; 
+}
+
+.total {
+    color: var(--HEADER_F-COLOR_1);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: -1em;
+}
+
+/* Reaction */
+.reaction {
+    margin: 0 auto;
+    width: 16.25em;
+}
+
+h2 {
+    color: var(--HEADER_F-COLOR_2);
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.reaction__description {
+    color: var(--HEADER_F-COLOR_1);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* || SUMMARY || */
+main {
+    position: relative;
+    background-color: var(--MAIN_BG-COLOR);
+    color: var(--MAIN_F-COLOR_1);
+    width: 100%;
+    padding: 0 1.5em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Summary */
+
+h3 {
+    text-align: left;
+    font-size: 1.125em;
+    font-weight: bold;
+}
+
+nav {
+    background-color: var;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    border-radius: 10px;
+}
+
+#Reaction {
+    background-color: var(--REACTION_BG-COLOR);
+}
+
+#Reaction h4 {
+    color: var(--REACTION_F-COLOR);
+}
+
+#Memory {
+    background-color: var(--MEMORY_BG-COLOR);
+}
+
+#Memory h4 {
+    color: var(--MEMORY_F-COLOR);
+}
+
+#Verbal {
+    background-color: var(--VERBAL_BG-COLOR);
+}
+
+#Verbal h4 {
+    color: var(--VERBAL_F-COLOR);
+}
+
+#Visual {
+    background-color: var(--VISUAL_BG-COLOR);
+}
+
+#Visual h4 {
+    color: var(--VISUAL_F-COLOR);
+}
+
+img, h4 {
+    margin-right: 1em;
+}
+
+nav p {
+    margin-left: auto;
+}
+
+.field {
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.score {
+    color: var(--MAIN_F-COLOR_2);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.score span {
+    color: var(--MAIN_F-COLOR_1);
+    margin-right: 0.3em;
+    
+}
+
+img {
+    display: inline-block;
+}
+
+/* Continue button */
+
+button {
+    background-color: var(--BUTTON_BG_COLOR);
+    color: var(--BUTTON_F_COLOR);
+    width: 19.6875em;
+    height: 3.5em;
+    border-radius: 30px;
+    font-weight: bold;
+    border: none;
+    margin: 1.5em 0;
+}
+
+/* || FOOTER || */
+
+footer {
+    margin: 2em;
+    font-size: 0.8em;
+}
+
+
+/* || || TABLET || || */
+
+
+@media screen and (min-width: 768px) {
+    
+    body {
+        margin: 20% auto;
+        width: 425px;
+    }
+
+    header {
+        border-radius: 20px;
+    }
+
+    main {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .resize__var {
+        box-shadow: 10px 10px 15px 10px rgba(0,0,0,0.1);
+    }
+}
+
+
+/* || || DESKTOP || || */
+
+
+@media screen and (min-width: 1024px) {
+
+/* || BODY || */
+
+    body {
+        margin: 20% auto;
+        width: 736px;
+    }
+
+    .resize__var {
+        width: 736px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 20px;
+    }
+
+/* || HEADER || */
+
+    header {
+        width: 50%;
+        height: 512px;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .reaction {
+        font-size: 1.125em;
+        padding: 1em;
+    }
+
+/* || MAIN || */
+
+    main {
+        width: 50%;
+        border-radius: 20px;
+        top: auto;
+    }
+
+/* Rankings */
+.rankings {
+    width: 12.5em;
+    height: 12.5em;
+}
+
+.position {
+    font-size: 4.5em;
+}
+
+.total {
+    font-size: 1.125em;
+}
+
+/* Reaction */
+.reaction {
+    width: 18em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.reaction__description {
+    font-size: 1.125em;
+}
+
+/* || SUMMARY || */
+main {
+    padding: 1em 3em;
+}
+
+/* Summary */
+
+h3 {
+    font-size: 1.5em;
+}
+
+
+nav {
+    padding: 1em 1em;
+    margin: 1em 0 1.5em;
+    border-radius: 10px;
+}
+
+/* Continue button */
+
+button {
+    width: 17em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(var(--HEADER_BG-COLOR_1), var(--HEADER_BG-COLOR_2));  
+}
+
+}
+
+
