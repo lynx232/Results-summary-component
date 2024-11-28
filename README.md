@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/results-summary-component-r4cwG3AyX_)
+- Live Site URL: (https://gp-results-summary-component.netlify.app/)
 
 ## My process
 
